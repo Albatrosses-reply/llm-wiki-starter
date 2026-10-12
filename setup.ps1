@@ -1,4 +1,4 @@
-# LLM Wiki 스타터 설치 (Windows)
+﻿# LLM Wiki 스타터 설치 (Windows)
 # 실행: 이 폴더에서 setup.ps1 우클릭 > "PowerShell에서 실행"
 # 막히면 PowerShell을 열고:  powershell -ExecutionPolicy Bypass -File .\setup.ps1
 param([switch]$DryRun)
