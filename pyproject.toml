@@ -1,0 +1,27 @@
+[project]
+name = "wikikit"
+version = "0.1.0"
+description = "Zotero + Codex CLI로 돌아가는 개인 연구 문헌 위키 (수집·ingest·아침 브리핑)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Hojun Kang" }]
+requires-python = ">=3.11"
+dependencies = [
+  "pyyaml>=6",
+  "pymupdf>=1.24",
+  "rapidfuzz>=3",
+  "tomli-w>=1.0",
+]
+
+[project.scripts]
+wiki = "wikikit.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["wikikit"]
+
+[tool.setuptools.package-data]
+wikikit = ["prompts/*.md", "schemas/*.json", "data/*.toml"]

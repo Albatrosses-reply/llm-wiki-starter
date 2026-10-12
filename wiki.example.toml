@@ -1,0 +1,39 @@
+# wiki.toml 견본. `wiki init`이 질문 4개로 wiki.toml을 만든다. 메모장으로 고쳐도 된다.
+
+[me]
+name = "홍길동"
+email = "me@example.ac.kr"          # Crossref에 예의상 알리는 연락처. 공개되지 않음
+topics = [                          # 내 연구 주제 1~3줄. 신착 관련도와 '내 연구와의 관계' 초안에 쓴다
+  "스테이블코인 런 위험과 보유자 구조",
+  "디지털 플랫폼의 알고리즘 추천과 콘텐츠 품질",
+]
+
+[zotero]
+data_dir = ""                       # 비우면 기본(C:\Users\<나>\Zotero 또는 ~/Zotero). Zotero › 설정 › 고급 › 파일과 폴더에서 확인
+inbox_collection = "Wiki Inbox"     # 이 컬렉션에 넣은 논문이 위키가 된다
+inbox_tag = "wiki-inbox"            # `wiki add`로 넣은 논문에 붙는 태그 (이 태그도 Inbox로 본다)
+port = 23119
+
+[codex]
+model = ""                          # 비우면 Codex 기본 모델
+reasoning_effort = "medium"         # low | medium | high. 낮을수록 사용량이 적다
+timeout_s = 600
+
+[daily]
+enabled = true
+time = "08:00"                      # 매일 실행 시각. 놓치면 PC를 켤 때 바로
+ingest_max = 3                      # 하루에 위키로 만들 논문 수 (ChatGPT 사용 한도를 생각해 작게)
+candidates_max = 10                 # 브리핑에 보일 신착 후보 수
+lookback_days = 14                  # 처음 실행할 때 며칠 전 신착부터 모을지
+
+[journals]
+fields = ["정보시스템"]             # 정보시스템 | 재무 | 경영 | 경제 (wikikit/data/journals.toml)
+extra = [                           # 더 받고 싶은 저널. ISSN은 저널 홈페이지나 portal.issn.org
+  # { name = "Journal of Banking & Finance", issn = "0378-4266" },
+]
+keywords = []                       # 비우면 전부. 넣으면 제목·초록에 하나라도 있는 것만. 예: ["stablecoin", "platform"]
+
+[library]
+name = ""                           # 예: "서강대학교 도서관"
+proxy_suffix = ""                   # 예: ".libproxy.sogang.ac.kr"  (PDF 필요 목록의 도서관 링크)
+ebsco_search = ""                   # 예: "https://research-ebsco-com.libproxy.sogang.ac.kr/c/<기관ID>/search/results?q=DO%20{doi}"

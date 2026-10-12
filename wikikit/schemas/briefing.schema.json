@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["headline", "new_pages", "candidates", "pick"],
+  "properties": {
+    "headline": {"type": "string", "description": "오늘 브리핑을 한 문장으로"},
+    "new_pages": {
+      "type": "array",
+      "items": {"type": "object", "additionalProperties": false, "required": ["citekey", "lines"],
+                "properties": {"citekey": {"type": "string"},
+                               "lines": {"type": "array", "items": {"type": "string"}, "description": "질문·방법·결과 3줄"}}}
+    },
+    "candidates": {
+      "type": "array",
+      "items": {"type": "object", "additionalProperties": false, "required": ["id", "relevance", "one_line", "why"],
+                "properties": {"id": {"type": "integer"},
+                               "relevance": {"type": "integer", "description": "내 연구 주제와의 관련도 0~3"},
+                               "one_line": {"type": "string", "description": "무엇을 하는 논문인지 한국어 한 줄"},
+                               "why": {"type": "string", "description": "관련도 근거 한 구절. 관련 없으면 빈 문자열"}}}
+    },
+    "pick": {"type": "string", "description": "오늘 먼저 읽을 한 편과 이유 한 문장. 없으면 빈 문자열"}
+  }
+}

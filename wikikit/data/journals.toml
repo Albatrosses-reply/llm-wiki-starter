@@ -1,0 +1,31 @@
+# 관심 분야별 기본 저널 (ISSN은 2026-10 Crossref에서 확인). wiki.toml의 [journals] fields에서 고르고, extra로 더한다.
+
+"정보시스템" = [
+  { name = "MIS Quarterly", issn = "0276-7783" },
+  { name = "Information Systems Research", issn = "1047-7047" },
+  { name = "Journal of Management Information Systems", issn = "0742-1222" },
+  { name = "Management Science", issn = "0025-1909" },
+]
+
+"재무" = [
+  { name = "The Journal of Finance", issn = "0022-1082" },
+  { name = "Journal of Financial Economics", issn = "0304-405X" },
+  { name = "The Review of Financial Studies", issn = "0893-9454" },
+  { name = "Journal of Financial and Quantitative Analysis", issn = "0022-1090" },
+]
+
+"경영" = [
+  { name = "Academy of Management Journal", issn = "0001-4273" },
+  { name = "Strategic Management Journal", issn = "0143-2095" },
+  { name = "Organization Science", issn = "1047-7039" },
+  { name = "Administrative Science Quarterly", issn = "0001-8392" },
+  { name = "Management Science", issn = "0025-1909" },
+]
+
+"경제" = [
+  { name = "American Economic Review", issn = "0002-8282" },
+  { name = "Econometrica", issn = "0012-9682" },
+  { name = "The Quarterly Journal of Economics", issn = "0033-5533" },
+  { name = "Journal of Political Economy", issn = "0022-3808" },
+  { name = "The Review of Economic Studies", issn = "0034-6527" },
+]
